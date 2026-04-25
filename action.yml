@@ -29,7 +29,7 @@ runs:
         if [[ `wc -l < errors.yml` != "0" ]]; then
             cp errors.yml artifacts
         fi
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v7
       if: always()
       with:
         name: build-${{ inputs.preset }}
